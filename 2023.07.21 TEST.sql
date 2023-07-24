@@ -28,3 +28,22 @@ UPDATE SCORE SET KOR = '120' WHERE NUM = 1;
 
 DELETE FROM SCORE WHERE NUM = 1; 
 COMMIT;
+
+CREATE TABLE member(
+	id varchar(30) primary key,
+    name varchar(30)
+    );
+    
+select * from member;
+insert into member(id, name) values('admin','홍길동');
+insert into member(id,name) values('test','이순신');
+
+commit;
+
+select * from member;
+
+# M : 1
+select * from score s left join member m on s.name = m.id;
+
+# 1 : M
+select * from member m left join score s on m.id = s.name;
