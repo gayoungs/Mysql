@@ -1,0 +1,10 @@
+#
+
+CREATE TABLE USERS(
+	USERNAME VARCHAR(50) PRIMARY KEY, #ID
+    PASSWORD VARCHAR(50), #PW
+    ROLE VARCHAR(50) #권한
+
+);
+
+select * from users;
